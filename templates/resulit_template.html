@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Result</title>
+</head>
+<body>
+    {% if login_successful %}
+        <script>
+            // 템플릿 변수를 사용하여 알림창 텍스트를 동적으로 생성
+            var alertText = `로그인이 성공하였습니다. ID: {{ best_match_image.id }}, 유사도: {{ max_similarity }}`;
+            alert(alertText);
+        </script>
+    {% else %}
+        <p>출석이 되지 않았습니다. 다시한번 시도해 주세요.</p>
+    {% endif %}
+</body>
+</html>

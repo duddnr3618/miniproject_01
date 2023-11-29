@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+        }
+
+        #container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>회원가입</h1>
+    </div>
+
+    <div id="container">
+        <form action="/signup" method="post" enctype="multipart/form-data">
+            <label for="username">사용자명:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="number">번호:</label>
+            <input type="text" id="number" name="number" required>
+
+            <label for="file">프로필 사진 업로드:</label>
+            <input type="file" id="file" name="file" accept="image/*" required>
+
+            <button type="submit">회원가입</button>
+        </form>
+    </div>
+</body>
+</html>
